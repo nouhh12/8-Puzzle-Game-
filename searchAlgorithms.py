@@ -15,7 +15,6 @@ def BFS(boardState):
         currentState=frontier.pop(0) #Dequeue from first index in queue (FIFO)
         explored.add(matrixToNum(currentState))  #Adding board state as a number to explored set
         if isGoalState(currentState):
-            print("Breaking:",currentState)
             break
         else:
             children=nextStates(currentState)
@@ -46,7 +45,6 @@ def DFS(boardState):
         currentState=frontier.pop() #Pop last index in stack (LIFO)
         explored.add(matrixToNum(currentState)) #Adding board state as a number to explored set
         if isGoalState(currentState):
-            print("Breaking:",currentState)
             break
         else:
             children=nextStates(currentState)
